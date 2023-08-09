@@ -21,15 +21,15 @@ video, but it is what it is.
 
 ### FAQ
 
-Q: It takes so long.
+Q: It takes so long.\
 A: I know, currently it does not support streaming so you have to wait for the
 entire video to generate first. Trust me, the dopamine will be worth it.
 
-Q: What to do while I wait for the video to render?
+Q: What to do while I wait for the video to render?\
 A: Watch some TikTok.
 
-Q: Can it also work on local files?
+Q: Can it also work on local files?\
 A: Yes. If the url is a file on the local machine it will use that instead.
 
-Q: Can I change the default minecraft video?
+Q: Can I change the default minecraft video?\
 A: Yes. Use the second argument as the url/path to the vertical bottom video.
