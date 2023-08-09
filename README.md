@@ -13,7 +13,7 @@ Run the script with the url that you want to watch. This will create a mp4 file
 that you can watch.
 
 ```console
-./fried.sh <URL>
+./fried.sh <URL/path>
 ```
 
 If you run it for the first time it will also have to download the minecraft
@@ -27,3 +27,6 @@ entire video to generate first. Trust me, the dopamine will be worth it.
 
 Q: What to do while I wait for the video to render?
 A: Watch some TikTok.
+
+Q: Can it also work on local files?
+A: Yes. If the url is a file on the local machine it will use that instead.

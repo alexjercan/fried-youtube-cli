@@ -11,8 +11,12 @@ then
     exit 1
 fi
 
-rm -f $video1
-youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' $url -o $video1
+if [ -f "$url" ]; then
+    video1=$url
+else
+    rm -f $video1
+    youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' $url -o $video1
+fi
 
 if [ ! -f "$video2" ]
 then
@@ -33,4 +37,3 @@ ffmpeg -i $video1 -i $video2 -filter_complex \
     [top][bottom] vstack=inputs=2[v]; \
     [0:a]aformat=sample_fmts=fltp:channel_layouts=stereo[a]" \
     -map "[v]" -map "[a]" -c:v libx264 -c:a aac -crf 23 -preset veryfast -shortest output.mp4 -y
-
